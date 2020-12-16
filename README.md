@@ -4,7 +4,8 @@ The `pairwise` function applies the technique of pairwise testing, that is, it t
 
 And example of what wil be filtered can be seen in the unit test.
 
-More info on pairwise tesing
+
+More info on pairwise testing:
 
 "In computer science, all-pairs testing or pairwise testing is a combinatorial method of software testing that, for each pair of input parameters to a system (typically, a software algorithm), tests all possible discrete combinations of those parameters. Using carefully chosen test vectors, this can be done much faster than an exhaustive search of all combinations of all parameters, by "parallelizing" the tests of parameter pairs."
 (source: https://en.wikipedia.org/wiki/All-pairs_testing)
