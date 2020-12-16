@@ -1,6 +1,6 @@
 https://github.com/avocado-framework/avocado-vt/ uses cartesian_config to create list of test cases over all test parameter combinations.
 
-The `pairwise` function applies the technique of pairwise testing, that is, it takes a list of test case names (p1.p2.p3, e.g. virsh.domstats.argument) and filters auto only two-way combinations.
+The `pairwise` function applies the technique of pairwise testing, that is, it takes a list of test case names (p1.p2.p3, e.g. virsh.domstats.argument) and filters to only two-way combinations.
 
 And example of what wil be filtered can be seen in the unit test.
 
