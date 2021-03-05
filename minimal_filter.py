@@ -4,7 +4,7 @@ def parts(line):
     p = line.split(SEP)
     return p
 
-def pairwise(lines):
+def minimal(lines):
     diag = []
 
     for line in lines:
@@ -46,9 +46,9 @@ test_lines = [
 
 class TestDiagonal(unittest.TestCase):
 
-    def test_pairwise(self):
-        pairwised = pairwise(test_lines)
-        self.assertEqual(pairwised, ["a1.b1.c1", "a1.b1.c2", "a1.b2.c1", "a1.d1"])
+    def test_minimal(self):
+        minimald = minimal(test_lines)
+        self.assertEqual(minimald, ["a1.b1.c1", "a1.b1.c2", "a1.b2.c1", "a1.d1"])
 
 if __name__ == '__main__':
     unittest.main()
