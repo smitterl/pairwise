@@ -1,7 +1,7 @@
 import re
 import subprocess
 import sys
-from filter import pairwise
+from minimal_filter import minimal
 
 # holds the vt only filter
 ONLY = []
@@ -54,7 +54,7 @@ if __name__ == '__main__':
             print(name)
         sys.exit(0)
 
-    filtered_test_names = pairwise(test_names)
+    filtered_test_names = minimal(test_names)
     for name in filtered_test_names:
         print(name)
 
