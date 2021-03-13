@@ -56,7 +56,7 @@ def parse_args():
 
 def get_avocado_list():
     test_names = []
-    command = ("avocado list %s --vt-only-filter %s --paginator off" %
+    command = ("avocado list %s --vt-only-filter %s" %
                (OPTIONS, ONLY))
     output = subprocess.check_output(command, shell=True).decode()
     for row in output.split('\n'):
