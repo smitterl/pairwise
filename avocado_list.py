@@ -9,6 +9,7 @@ PRINT_ORIGINAL = False
 SHOW_STATS = False
 APPLY_FILTER = None
 OPTIONS = None
+TEST_TYPE = "avocado-vt"
 
 def print_help(exit_code):
     print(sys.argv[0] + " [-t] [-s] <-p|-m> [<vt-options>] <--vt-only-filter argument>")
@@ -60,9 +61,9 @@ def get_avocado_list():
                (OPTIONS, ONLY))
     output = subprocess.check_output(command, shell=True).decode()
     for row in output.split('\n'):
-        if not row.startswith("VT"):
+        if not row.startswith(TEST_TYPE):
             continue
-        test_names.append(re.sub("VT\\s+.*autotest-libvirt.", "", row))
+        test_names.append(re.sub(TEST_TYPE + "\\s+.*autotest-libvirt.", "", row))
     return test_names
 
 
