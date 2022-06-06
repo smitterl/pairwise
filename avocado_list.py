@@ -10,7 +10,7 @@ PRINT_ORIGINAL = False
 SHOW_STATS = False
 APPLY_FILTER = None
 OPTIONS = None
-TEST_TYPE = "VT"
+TEST_TYPE = "avocado-vt" # older versions of avocado might use 'VT'
 
 def print_help(exit_code):
     print(sys.argv[0] + " [-t] [-s] <-p|-m> [<vt-options>] <--vt-only-filter argument>")
