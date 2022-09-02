@@ -61,7 +61,7 @@ def create_file(job_name, output_dir):
 
     cmd = ("python avocado_list.py -m '--vt-type libvirt"
            " --vt-no-filter \"%s\" --vt-machine-type s390-virtio'"
-           " \"%s\"" % (no_filter, only_filter))
+           " \"%s\" | sort" % (no_filter, only_filter))
     s390x_only = popen(cmd).read().strip('\n')
 
     write_file(path.join(output_dir, job_name + "-s390x.only"), s390x_only)
