@@ -92,8 +92,8 @@ if __name__ == '__main__':
             print(name)
         sys.exit(0)
 
+    random.shuffle(test_names)
     filtered_test_names = APPLY_FILTER(test_names)
-    random.shuffle(filtered_test_names)
     for name in filtered_test_names:
         print(name)
 
